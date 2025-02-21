@@ -5,7 +5,7 @@ import Header from './components/Header';
 import DaySelector from './components/DaySelector';
 import { getCurrentRamadanDay, isRamadanStarted, getDaysProgress } from './utils/dateUtils';
 import { loadFromLocalStorage, saveToLocalStorage, clearLocalStorage } from './utils/storage';
-
+import InstallButton from "./components/InstallButton"
 function App() {
   const currentDay = getCurrentRamadanDay();
   const [selectedDay, setSelectedDay] = useState(currentDay);
@@ -52,6 +52,7 @@ function App() {
                 <br />
                 Prepare yourself for this special time of worship and reflection.
               </p>
+              <InstallButton/>
             </motion.div>
           ) : (
             <>
