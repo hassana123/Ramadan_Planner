@@ -52,7 +52,7 @@ function App() {
                 <br />
                 Prepare yourself for this special time of worship and reflection.
               </p>
-              <InstallButton/>
+             
             </motion.div>
           ) : (
             <>
@@ -136,6 +136,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <InstallButton/>
     </div>
   );
 }

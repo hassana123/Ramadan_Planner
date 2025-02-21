@@ -1,6 +1,6 @@
 import { format, isAfter, isBefore, startOfDay, differenceInDays } from 'date-fns';
 
-export const RAMADAN_START_DATE = startOfDay(new Date('2025-03-01'));
+export const RAMADAN_START_DATE = startOfDay(new Date('2025-02-01'));
 export const RAMADAN_END_DATE = startOfDay(new Date('2025-03-30')); // Adjusted for February
 
 export function getCurrentRamadanDay() {

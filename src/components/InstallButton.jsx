@@ -28,9 +28,13 @@ const InstallButton = () => {
     showButton && (
       <button
         onClick={handleInstall}
-        className="fixed bottom-5 right-5 bg-primary text-white px-4 py-2 rounded-lg shadow-lg hover:bg-secondary transition"
+        className="fixed text-xl bottom-2 right-2 px-5 py-3 
+                   bg-white/10 backdrop-blur-md border border-white/20 
+                   text-black shadow-lg rounded-xl 
+                   hover:bg-white/20 hover:border-white/30 
+                   transition-all duration-300 ease-in-out"
       >
-        Install Ramadan Tracker
+        Install App
       </button>
     )
   );
