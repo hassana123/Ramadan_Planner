@@ -6,6 +6,7 @@ import DaySelector from './components/DaySelector';
 import { getCurrentRamadanDay, isRamadanStarted, getDaysProgress } from './utils/dateUtils';
 import { loadFromLocalStorage, saveToLocalStorage, clearLocalStorage } from './utils/storage';
 import InstallButton from "./components/InstallButton"
+import CountdownToRamadan from './components/Countdown';
 function App() {
   const currentDay = getCurrentRamadanDay();
   const [selectedDay, setSelectedDay] = useState(currentDay);
@@ -35,25 +36,11 @@ function App() {
   return (
     <div className="min-h-screen bg-[url('/ramadan-bg.png')] bg-cover bg-center bg-fixed">
       <div className="min-h-screen bg-gradient-to-br from-primary-900/80 to-secondary-900/80 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto px-2 py-8">
           <Header currentDay={currentDay} hasStarted={hasRamadanStarted} />
           
           {!hasRamadanStarted ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-8 text-center bg-white/90 rounded-2xl shadow-lg p-8"
-            >
-              <h2 className="text-2xl font-bold text-secondary-800 mb-4">
-                Ramadan 2025 Countdown
-              </h2>
-              <p className="text-lg text-secondary-600">
-                The blessed month of Ramadan will begin on March 1st, 2025.
-                <br />
-                Prepare yourself for this special time of worship and reflection.
-              </p>
-             
-            </motion.div>
+           <CountdownToRamadan/>
           ) : (
             <>
               <DaySelector
